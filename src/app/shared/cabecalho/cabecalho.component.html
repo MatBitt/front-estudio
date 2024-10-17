@@ -1,0 +1,23 @@
+<mat-toolbar class="cabecalho">
+  <div class="spacer"></div>
+  <div class="centered">
+    <a style="display: flex" routerLink="/">
+      <img
+        width="150"
+        height="30"
+        src="assets/logotipo.png"
+        alt="Logo"
+        class="d-inline-block align-text-top"
+        style="object-fit: cover"
+      />
+    </a>
+  </div>
+  <div class="right-aligned">
+    <mat-icon class="carrinho" [routerLink]="['/carrinho']">shopping_cart</mat-icon>
+    <!-- @if (cartCount(); as count) {
+  <span class="notification-label">{{
+      count > 0 ? count : ""
+    }}</span>
+  } -->
+  </div>
+</mat-toolbar>

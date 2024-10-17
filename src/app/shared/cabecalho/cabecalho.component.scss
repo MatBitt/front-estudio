@@ -1,0 +1,29 @@
+@import "variables";
+
+.cabecalho {
+  background-color: $azul;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.centered {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.right-aligned {
+  flex: 1;
+  display: flex;
+  justify-content: right;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.carrinho {
+  color: $preto;
+  cursor: pointer;
+}
