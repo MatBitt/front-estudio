@@ -1,0 +1,27 @@
+@import "variables";
+
+.card {
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.botao {
+  background-color: $laranja !important;
+  color: #FFF !important;
+  font-family: 'Caprasimo';
+  width: 50%;
+}
+
+.titulo {
+  font-family: 'Caprasimo';
+}
+
+.preco {
+  font-family: 'Caprasimo';
+  color: $azul;
+  font-size:x-large;
+}
+
+.descricao {
+  font-family: 'Caprasimo';
+}

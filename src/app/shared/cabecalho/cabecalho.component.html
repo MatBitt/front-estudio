@@ -14,10 +14,10 @@
   </div>
   <div class="right-aligned">
     <mat-icon class="carrinho" [routerLink]="['/carrinho']">shopping_cart</mat-icon>
-    <!-- @if (cartCount(); as count) {
-  <span class="notification-label">{{
-      count > 0 ? count : ""
-    }}</span>
-  } -->
+    @if (contagemCarrinho(); as count) {
+      <span class="notification-label">{{
+            count > 0 ? count : ""
+          }}</span>
+      }
   </div>
 </mat-toolbar>

@@ -1,1 +1,15 @@
-<p>home works!</p>
+<nav class="nav">
+  <div class="header nav">
+    @for (produto of $produtos | async; track produto.id) {
+    <span class="sub-header" (click)="redireciona(produto.categoria)">{{
+      produto.categoria
+    }}</span>
+    }
+  </div>
+</nav>
+
+<div>
+  @for (produto of $produtos | async; track produto.id) {
+  <app-card [produto]="produto" (buttonClicked)="detalhar($event)"></app-card>
+  }
+</div>

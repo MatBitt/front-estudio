@@ -5,6 +5,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
 }
 
 .centered {
@@ -26,4 +28,8 @@
 .carrinho {
   color: $preto;
   cursor: pointer;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 10px;
+  padding: 5px 10px;
 }

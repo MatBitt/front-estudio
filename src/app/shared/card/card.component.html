@@ -1,0 +1,13 @@
+<mat-card class="card" appearance="outlined">
+  <img mat-card-image [src]="produto.imagem" alt="Photo of a Shiba Inu" />
+  <mat-card-content>
+    <mat-card-title class="titulo">{{ produto.titulo }}</mat-card-title>
+    <mat-card-subtitle class="preco">R$ {{ produto.preco| number:'1.2-2'}}</mat-card-subtitle>
+    <!-- <p>
+      {{ descricao }}
+    </p> -->
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button class="botao" (click)="onButtonClick()">ver produto</button>
+  </mat-card-actions>
+</mat-card>
