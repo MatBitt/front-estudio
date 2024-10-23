@@ -1,9 +1,5 @@
 @import "variables";
 
-.sub-header{
-  cursor: pointer;
-}
-
 .nav {
   display: flex;
 }
@@ -19,7 +15,55 @@
   display: flex;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
+.sub-header{
+  cursor: pointer;
 }
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cards "quebrem" a linha */
+  justify-content: center; /* Centraliza os cards quando há menos de 6 por linha */
+  gap: 16px; /* Espaçamento entre os cards */
+  padding: 16px; /* Espaçamento interno do container */
+}
+
+.card-wrapper {
+  flex: 1 1 calc(100% / 6 - 16px); /* Cada card ocupa 1/6 da largura com espaçamento */
+  max-width: calc(100% / 6 - 16px); /* Limita a largura máxima a 1/6 */
+}
+
+@media (max-width: 1800px) {
+  .card-wrapper {
+    flex: 1 1 calc(100% / 5 - 16px); /* Em telas menores, 5 cards por linha */
+    max-width: calc(100% / 5 - 16px);
+  }
+}
+
+@media (max-width: 1600px) {
+  .card-wrapper {
+    flex: 1 1 calc(100% / 4 - 16px); /* Em telas menores, 4 cards por linha */
+    max-width: calc(100% / 4 - 16px);
+  }
+}
+
+@media (max-width: 1300px) {
+  .card-wrapper {
+    flex: 1 1 calc(100% / 3 - 16px); /* Em telas médias, 3 cards por linha */
+    max-width: calc(100% / 3 - 16px);
+  }
+}
+
+@media (max-width: 1000px) {
+  .card-wrapper {
+    flex: 1 1 calc(100% / 2 - 16px); /* Em telas pequenas, 2 cards por linha */
+    max-width: calc(100% / 2 - 16px);
+  }
+}
+
+@media (max-width: 700px) {
+  .card-wrapper {
+    flex: 1 1 100%; /* Em telas muito pequenas, 1 card por linha */
+    max-width: 100%;
+  }
+}
+

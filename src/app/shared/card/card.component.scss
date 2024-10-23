@@ -2,7 +2,9 @@
 
 .card {
   max-width: 300px;
+  max-width: 300px;
   border-radius: 10px;
+  justify-self: center;
 }
 
 .botao {
@@ -10,7 +12,7 @@
   color: #fff !important;
   font-family: "Caprasimo";
   font-weight: 500;
-  width: 50%;
+  width: 100%;
 }
 
 .titulo {
@@ -21,4 +23,17 @@
   font-family: "Caprasimo";
   color: $azul;
   font-size: x-large;
+}
+
+mat-card {
+  width: 100%; /* Largura do card */
+  max-width: 300px; /* Defina um tamanho máximo se necessário */
+  margin: auto; /* Centraliza o card horizontalmente */
+}
+
+mat-card img {
+  width: 100%; /* Faz a imagem ocupar toda a largura do card */
+  height: 300px;
+  object-fit: cover; /* Garante que a imagem seja redimensionada corretamente, mantendo o aspecto */
+  border-radius: 8px; /* Opcional: adiciona bordas arredondadas */
 }

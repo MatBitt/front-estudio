@@ -11,12 +11,14 @@
 <div>
   @for (categoria of categorias$ | async; track categoria) {
     <app-titulo [titulo]="categoria"></app-titulo>
-    @for (produto of produtos$ | async; track produto.id) {
-      @if (produto.categoria === categoria) {
-        <div class="container">
-          <app-card [produto]="produto" (buttonClicked)="detalhar($event)"></app-card>
-        </div>
-      }
-    }
+    <div class="cards-container">
+        @for (produto of produtos$ | async; track produto.id) {
+          @if (produto.categoria === categoria) {
+            <div class="card-wrapper">
+              <app-card [produto]="produto" (buttonClicked)="detalhar($event)"></app-card>
+            </div>
+          }
+        }
+    </div>
   }
 </div>

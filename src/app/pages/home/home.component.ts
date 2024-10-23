@@ -22,10 +22,10 @@ export class HomeComponent {
   readonly dialog = inject(MatDialog);
 
   constructor(private produtoService: ProdutoService) {
-    this.produtos$ = this.produtoService.load();
+    this.produtos$ = this.produtoService.mock();
     this.categorias$ = this.produtos$.pipe(
       map(produtos => {
-        return produtos.map(p => p.categoria);
+        return Array.from(new Set(produtos.map(p => p.categoria)));
       })
     );
   }

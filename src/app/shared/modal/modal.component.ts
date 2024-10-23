@@ -13,6 +13,7 @@ import { Produto } from '../../interfaces/produto';
 import { CommonModule } from '@angular/common';
 import { CarrinhoService } from '../../servicos/carrinho/carrinho.service';
 import { MatIconModule } from '@angular/material/icon';
+import { QuebraDeLinhaPipe } from '../pipes/quebra-de-linha/quebra-de-linha.pipe';
 
 @Component({
   selector: 'app-modal',
@@ -26,6 +27,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     CommonModule,
     MatCardModule,
+    QuebraDeLinhaPipe
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './modal.component.html',
