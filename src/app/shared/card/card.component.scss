@@ -7,21 +7,18 @@
 
 .botao {
   background-color: $laranja !important;
-  color: #FFF !important;
-  font-family: 'Caprasimo';
+  color: #fff !important;
+  font-family: "Caprasimo";
+  font-weight: 500;
   width: 50%;
 }
 
 .titulo {
-  font-family: 'Caprasimo';
+  font-family: "Caprasimo";
 }
 
 .preco {
-  font-family: 'Caprasimo';
+  font-family: "Caprasimo";
   color: $azul;
-  font-size:x-large;
-}
-
-.descricao {
-  font-family: 'Caprasimo';
+  font-size: x-large;
 }

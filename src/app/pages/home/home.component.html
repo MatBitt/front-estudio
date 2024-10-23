@@ -1,15 +1,22 @@
 <nav class="nav">
   <div class="header nav">
-    @for (produto of $produtos | async; track produto.id) {
-    <span class="sub-header" (click)="redireciona(produto.categoria)">{{
-      produto.categoria
+    @for (categoria of categorias$ | async; track categoria) {
+    <span class="sub-header" (click)="redireciona(categoria)">{{
+      categoria
     }}</span>
     }
   </div>
 </nav>
 
 <div>
-  @for (produto of $produtos | async; track produto.id) {
-  <app-card [produto]="produto" (buttonClicked)="detalhar($event)"></app-card>
+  @for (categoria of categorias$ | async; track categoria) {
+    <app-titulo [titulo]="categoria"></app-titulo>
+    @for (produto of produtos$ | async; track produto.id) {
+      @if (produto.categoria === categoria) {
+        <div class="container">
+          <app-card [produto]="produto" (buttonClicked)="detalhar($event)"></app-card>
+        </div>
+      }
+    }
   }
 </div>

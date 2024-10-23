@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3px;
+  margin-top: 5px;
+  align-items: center;
+}
+
+.imagem {
+  object-fit: cover;
+}
+
+.titulo {
+  font-size: 28px;
+}

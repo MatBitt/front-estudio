@@ -1,0 +1,28 @@
+<mat-card class="card" appearance="outlined">
+  <img mat-card-image [src]="produto.imagem" alt="Photo of a Shiba Inu" />
+  <div class="fechar">
+    <mat-icon mat-dialog-close>close</mat-icon>
+  </div>
+  <mat-card-content>
+    <mat-card-title class="titulo">{{ produto.titulo }}</mat-card-title>
+    <p class="descricao">
+      {{ produto.descricao }}
+    </p>
+    <mat-card-subtitle class="preco"
+      >R$ {{ produto.preco | number : "1.2-2" }}</mat-card-subtitle
+    >
+  </mat-card-content>
+  <mat-card-actions class="botoes">
+    <button mat-raised-button class="botao" (click)="diminui()">-</button>
+    <p class="quantidade">x{{ quantidade }}</p>
+    <button mat-raised-button class="botao" (click)="aumenta()">+</button>
+    <button
+      mat-raised-button
+      mat-dialog-close
+      class="adicionar"
+      (click)="adciona()"
+    >
+      Adicionar
+    </button>
+  </mat-card-actions>
+</mat-card>

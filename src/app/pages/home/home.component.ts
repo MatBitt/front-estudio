@@ -1,21 +1,33 @@
 import { Produto } from './../../interfaces/produto';
-import { Observable } from 'rxjs';
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { map, Observable } from 'rxjs';
+import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { ProdutoService } from '../../servicos/produto/produto.service';
 import { CardComponent } from '../../shared/card/card.component';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalComponent } from '../../shared/modal/modal.component';
+import { TituloComponent } from "../../shared/titulo/titulo.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [AsyncPipe, CommonModule, CardComponent],
+  imports: [AsyncPipe, CommonModule, CardComponent, ModalComponent, TituloComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  $produtos: Observable<Produto[]>;
+  produtos$: Observable<Produto[]>;
+  categorias$: Observable<string[]>;
+
+  readonly dialog = inject(MatDialog);
+
   constructor(private produtoService: ProdutoService) {
-    this.$produtos = this.produtoService.load();
+    this.produtos$ = this.produtoService.load();
+    this.categorias$ = this.produtos$.pipe(
+      map(produtos => {
+        return produtos.map(p => p.categoria);
+      })
+    );
   }
 
   redireciona(categoria: string) {
@@ -25,7 +37,8 @@ export class HomeComponent {
     }
   }
 
-  detalhar(id: number) {
-    console.log(id);
+  detalhar(produto: Produto) {
+    this.dialog.open(ModalComponent, { data: produto });
+    console.log(produto.id);
   }
 }

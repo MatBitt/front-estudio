@@ -19,7 +19,7 @@ import { MatCardModule } from '@angular/material/card';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CardComponent {
-  @Output() buttonClicked = new EventEmitter<number>();
+  @Output() buttonClicked = new EventEmitter<Produto>();
   @Input() produto: Produto = {
     id: 0,
     titulo: '',
@@ -30,6 +30,6 @@ export class CardComponent {
   };
 
   onButtonClick() {
-    this.buttonClicked.emit(this.produto.id);
+    this.buttonClicked.emit(this.produto);
   }
 }
