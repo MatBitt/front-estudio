@@ -6,7 +6,118 @@ import { Produto } from '../../interfaces/produto';
   providedIn: 'root',
 })
 export class CarrinhoService {
-  itensCarrinho = signal<ItemCarrinho[]>([]);
+  itensCarrinho = signal<ItemCarrinho[]>([
+    {
+      quantidade: 2,
+      produto: {
+        id: 1,
+        titulo: 'Planner Gatinhos - não datado mais uma linha de',
+        descricao: 'desc',
+        categoria: 'planner',
+        imagem: 'assets/plannergato1.jpg',
+        preco: 64.90
+      }
+    },
+    {
+      quantidade: 2,
+      produto: {
+        id: 2,
+        titulo: 'Oi',
+        descricao: 'desc',
+        categoria: 'planner',
+        imagem: 'assets/plannergato1.jpg',
+        preco: 64.90
+      }
+    },
+    {
+      quantidade: 2,
+      produto: {
+        id: 3,
+        titulo: 'Oi',
+        descricao: 'desc',
+        categoria: 'planner',
+        imagem: 'assets/plannergato1.jpg',
+        preco: 64.90
+      }
+    },
+    {
+      quantidade: 2,
+      produto: {
+        id: 4,
+        titulo: 'Oi',
+        descricao: 'desc',
+        categoria: 'planner',
+        imagem: 'assets/plannergato1.jpg',
+        preco: 64.90
+      }
+    },
+    {
+      quantidade: 2,
+      produto: {
+        id: 5,
+        titulo: 'Oi',
+        descricao: 'desc',
+        categoria: 'planner',
+        imagem: 'assets/plannergato1.jpg',
+        preco: 64.90
+      }
+    },
+    {
+      quantidade: 2,
+      produto: {
+        id: 6,
+        titulo: 'Oi',
+        descricao: 'desc',
+        categoria: 'planner',
+        imagem: 'assets/plannergato1.jpg',
+        preco: 64.90
+      }
+    },
+    {
+      quantidade: 2,
+      produto: {
+        id: 7,
+        titulo: 'Oi',
+        descricao: 'desc',
+        categoria: 'planner',
+        imagem: 'assets/plannergato1.jpg',
+        preco: 64.90
+      }
+    },
+    {
+      quantidade: 2,
+      produto: {
+        id: 8,
+        titulo: 'Oi',
+        descricao: 'desc',
+        categoria: 'planner',
+        imagem: 'assets/plannergato1.jpg',
+        preco: 64.90
+      }
+    },
+    {
+      quantidade: 2,
+      produto: {
+        id: 9,
+        titulo: 'Oi',
+        descricao: 'desc',
+        categoria: 'planner',
+        imagem: 'assets/plannergato1.jpg',
+        preco: 64.90
+      }
+    },
+    {
+      quantidade: 2,
+      produto: {
+        id: 10,
+        titulo: 'Oi',
+        descricao: 'desc',
+        categoria: 'planner',
+        imagem: 'assets/plannergato1.jpg',
+        preco: 64.90
+      }
+    },
+  ]);
 
   quantidadeTotal = computed(() =>
     this.itensCarrinho().reduce((acc, atual) => acc + atual.quantidade, 0)

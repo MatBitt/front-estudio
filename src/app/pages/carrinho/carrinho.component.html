@@ -1,1 +1,16 @@
-<p>carrinho works!</p>
+<app-titulo titulo="carrinho"></app-titulo>
+@if (contagemCarrinho(); as count) {
+<p class="texto">Total: R$ {{ total() | number : "1.2-2" }}</p>
+<div class="carrinho">
+  <div class="container">
+    @for (item of carrinho; track item.produto.id) {
+    <app-side-card class="card" [item]="item"></app-side-card>
+    }
+  </div>
+</div>
+} @else {
+<p class="vazio">Seu carrinho está vazio</p>
+<button mat-raised-button class="botao" [routerLink]="['/']">
+  IR AS COMPRAS
+</button>
+}

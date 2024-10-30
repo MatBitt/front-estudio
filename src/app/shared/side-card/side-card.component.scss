@@ -1,0 +1,81 @@
+@import "variables";
+
+.card {
+  width: 70%;
+  border-radius: 10px;
+  justify-self: center;
+  display: flex;
+}
+
+.container-card {
+  display: flex;
+}
+
+.botao {
+  background-color: $laranja !important;
+  color: #fff !important;
+  font-family: "Caprasimo";
+  font-weight: 500;
+  margin: 0 5px;
+}
+
+.titulo {
+  font-family: "Caprasimo";
+}
+
+.preco {
+  font-family: "Caprasimo";
+  color: $azul;
+  font-size: x-large;
+}
+
+mat-card img {
+  width: 300px; /* Faz a imagem ocupar toda a largura do card */
+  height: 300px;
+  object-fit: cover; /* Garante que a imagem seja redimensionada corretamente, mantendo o aspecto */
+  border-radius: 8px; /* Opcional: adiciona bordas arredondadas */
+}
+
+.container-imagem {
+  height: 300px;
+}
+
+.container-texto {
+  width: 100%;
+}
+
+.botoes {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+}
+
+@media (max-width: 1500px) {
+  .card {
+    width: 100%;
+  }
+
+  mat-card img {
+    width: 200px; /* Faz a imagem ocupar toda a largura do card */
+    height: 200px;
+  }
+
+  .container-card {
+    height: 200px;
+  }
+}
+
+@media (max-width: 900px) {
+  .card {
+    width: 150%;
+  }
+
+  mat-card img {
+    width: 100px; /* Faz a imagem ocupar toda a largura do card */
+    height: 200px;
+  }
+
+  .container-card {
+    height: 200px;
+  }
+}

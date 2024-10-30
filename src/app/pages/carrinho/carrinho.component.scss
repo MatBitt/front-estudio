@@ -1,0 +1,36 @@
+@import "variables";
+
+p {
+  font-family: 'Yomogi';
+  justify-self: center;
+}
+
+.botao {
+  background-color: $laranja !important;
+  color: #fff !important;
+  font-family: "Caprasimo";
+  padding: 10px 20px;
+  border-style: none;
+  border-radius: 5px;
+}
+
+.card-container {
+  display: inline-block;
+}
+
+.card {
+  margin: 0 5px;
+}
+
+.container {
+  width: 50%;
+}
+
+.carrinho {
+  display: flex;
+  justify-content: center;
+}
+
+.texto {
+  display: flex;
+}

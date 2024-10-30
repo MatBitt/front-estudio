@@ -1,0 +1,26 @@
+<mat-card class="card" appearance="outlined">
+  <div class="container-card">
+    <div class="container-imagem">
+      <img
+        mat-card-image
+        [src]="item.produto.imagem"
+        alt="Photo of a Shiba Inu"
+      />
+    </div>
+    <mat-card-content class="container-texto">
+      <mat-card-title class="titulo">{{ item.produto.titulo }}</mat-card-title>
+      <mat-card-subtitle class="preco"
+        >R$ {{ item.produto.preco | number : "1.2-2" }}</mat-card-subtitle
+      >
+        <div class="botoes">
+          <button mat-raised-button class="botao" (click)="remover()">
+            -
+          </button>
+          <p>x{{ item.quantidade }}</p>
+          <button mat-raised-button class="botao" (click)="adicionar()">
+            +
+          </button>
+      </div>
+    </mat-card-content>
+  </div>
+</mat-card>
