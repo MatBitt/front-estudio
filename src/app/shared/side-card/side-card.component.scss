@@ -1,7 +1,7 @@
 @import "variables";
 
 .card {
-  width: 70%;
+  width: 600px;
   border-radius: 10px;
   justify-self: center;
   display: flex;
@@ -50,9 +50,9 @@ mat-card img {
   align-items: center;
 }
 
-@media (max-width: 1500px) {
+@media (max-width: 800px) {
   .card {
-    width: 100%;
+    width: 500px;
   }
 
   mat-card img {
@@ -65,9 +65,24 @@ mat-card img {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .card {
-    width: 150%;
+    width: 300px;
+  }
+
+  mat-card img {
+    width: 100px; /* Faz a imagem ocupar toda a largura do card */
+    height: 200px;
+  }
+
+  .container-card {
+    height: 200px;
+  }
+}
+
+@media (max-width: 350px) {
+  .card {
+    width: 300px;
   }
 
   mat-card img {
